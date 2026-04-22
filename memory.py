@@ -1,0 +1,3 @@
+import sys
+x = 123457876543456787654456789876543
+print(sys.getsizeof(x))
