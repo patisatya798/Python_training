@@ -1,0 +1,74 @@
+Start Program 
+import os(for path directories)
+import time(for current time , modified time)
+
+Main function call
+
+....................................
+
+FUNCTION main START
+
+function main:
+
+ ->Ask user to enter directories using split into list  
+ ->Ask user to enter number of days  
+
+ Call function get_files(directories)  
+
+ FUNCTION get_files START  
+ # pause main and run completely the get_files function  
+
+ ->Create a list named file to store file paths, also including subdirectories file paths (os.walk)  
+ ->Return list of files  
+
+ FUNCTION get_files END  
+
+# Resume the main function  
+-> for each file in files:  
+
+-> use try for any error like (file not found, file missing)  
+
+Call is_stale(file, days)  
+
+FUNCTION is_stale START  
+->Pause main and run complete is_stale function  
+
+->It takes two parameters: one is file path (address of file to be checked) and days (how many days)  
+->Use two variables to store current time (time.time()) and modified time (os.path.getmtime())  
+
+->Now calculate how many days old the file was modified (current time - modified time) / (60 * 60 * 24) (convert into days)  
+->and store this into a variable  
+
+->heck if this variable is greater than input days or not and return it  
+
+FUNCTION is_stale END .
+
+# Resume the main function Call get_file_info(file)  
+
+FUNCTION get_file_info START:  
+
+->Call get_file_info function for information about the file (size, modified time, name, extension)  
+
+->Run the function completely and return name, size, modified time, extension  
+
+FUNCTION get_file_info END  
+
+# Resume the main function  
+
+->Store the details of the old file into the empty stale_file list  
+
+->Back from for loop and call generate_report function with a parameter stale_files  
+
+FUNCTION generate_report START : 
+
+->In generate_report function have two variables for total_size, total_file to store how many files are old and their size  
+
+->It prints name, size, modified time, extension from stale_file list  
+
+FUNCTION generate_report END  
+
+FUNCTION main END
+
+....................................
+
+End Program
