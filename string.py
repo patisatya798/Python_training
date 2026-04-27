@@ -1,7 +1,7 @@
 greet = "Hello Friend, "
 greet1 = "Hello Student"
 
-greet3 = greet + greet1 #concatenate of string
+greet3 = greet + greet1 
 
 print(greet3)
 
